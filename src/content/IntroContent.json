@@ -1,0 +1,13 @@
+{
+  "title": "Your Shift Scheduling Assistant",
+  "text": "Shift management in care facilities is complicated and tedious. You've been doing so much. Now teach us once, and we will automated for you.",
+  "button": [
+    {
+      "title": "Explore"
+    },
+    {
+      "title": "Learn more",
+      "color": "#fff"
+    }
+  ]
+}

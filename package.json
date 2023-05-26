@@ -1,31 +1,46 @@
 {
-  "name": "cra-template-adrinlol",
-  "version": "1.4.0",
-  "keywords": [
-    "react-template",
-    "landy-template",
-    "cra-template",
-    "react-boilerplate",
-    "landing-page-template",
-    "react-free-template",
-    "react-landing-page-template",
-    "react-typescript-template"
-  ],
-  "main": "template.json",
-  "description": "Landy is a free React landing page template designed for developers and startups.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Adrinlol/create-react-app-adrinlol.git"
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/node": "^15.14.9",
+    "@types/react": "^17.0.60",
+    "@types/react-dom": "^17.0.20",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.26",
+    "antd": "^4.24.10",
+    "axios": "^0.21.4",
+    "i18next": "^19.9.2",
+    "i18next-browser-languagedetector": "^6.1.8",
+    "i18next-xhr-backend": "^3.2.2",
+    "react": "^18.2.0",
+    "react-awesome-reveal": "^3.8.1",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^11.18.6",
+    "react-router-dom": "^5.3.4",
+    "react-scripts": "5.0.1",
+    "styled-components": "^5.3.10",
+    "typescript": "^4.9.5"
   },
-  "license": "MIT",
-  "engines": {
-    "node": ">=10"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "files": [
-    "template",
-    "template.json"
-  ]
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
