@@ -10,6 +10,7 @@
     "@types/styled-components": "^5.1.26",
     "antd": "^4.24.10",
     "axios": "^0.21.4",
+    "googleapis": "^118.0.0",
     "i18next": "^19.9.2",
     "i18next-browser-languagedetector": "^6.1.8",
     "i18next-xhr-backend": "^3.2.2",
