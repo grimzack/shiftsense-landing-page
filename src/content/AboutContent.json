@@ -1,15 +1,45 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Everything and More",
+  "text": "We will make sure all your requirements are met. These are merely some examples of what you can ask for.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+      "title": "availability and preference",
+      "content": "We will take into account when each person is available, and their individual preference.",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "Staff Communication",
+      "content": "We can take this off of your hands! No more searching when nobody seems to be available for a slot.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Needs vary by hour",
+      "content": "You can set each hour to have different number of staff members.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Role and Seniority",
+      "content": "You can set the role and seniority needed per slot",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Short Notices?",
+      "content": "How long in advance should changes be made? That can be customized.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Changes confirmed by staff",
+      "content": "If you don't want changes to be made silently, let us know!",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Staff responsibility",
+      "content": "Set how many hours each member of staff needs to work. How many night shifts should they work?",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Well deserved break",
+      "content": "How many hours or days should a staff have in between shifts?",
       "icon": "notes.svg"
     }
   ]

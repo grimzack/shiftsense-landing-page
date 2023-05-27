@@ -44,7 +44,29 @@ const Footer = ({ t }: any) => {
       </a>
     );
   };
-
+  return (
+<Extra>
+        <Container border={true}>
+          <Row
+            justify="space-between"
+            align="middle"
+            style={{ paddingTop: "3rem" }}
+          >
+            <NavLink to="/">
+              <LogoContainer>
+                <SvgIcon
+                  src="logo.svg"
+                  aria-label="homepage"
+                  width="150px"
+                  height="30px"
+                />
+              </LogoContainer>
+            </NavLink>
+          </Row>
+        </Container>
+      </Extra>
+  )
+  /*
   return (
     <>
       <FooterSection>
@@ -171,7 +193,7 @@ const Footer = ({ t }: any) => {
         </Container>
       </Extra>
     </>
-  );
+  );*/
 };
 
 export default withTranslation()(Footer);

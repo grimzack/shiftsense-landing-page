@@ -48,6 +48,16 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               <Col span={24}>
                 <Input
                   type="text"
+                  name="company"
+                  placeholder="Company Name"
+                  value={values.company || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="company" />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="text"
                   name="email"
                   placeholder="Your Email"
                   value={values.email || ""}
@@ -57,7 +67,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               </Col>
               <Col span={24}>
                 <TextArea
-                  placeholder="Your Message"
+                  placeholder="Is there anything else you want to tell us? Leave it blank if not."
                   value={values.message || ""}
                   name="message"
                   onChange={handleChange}

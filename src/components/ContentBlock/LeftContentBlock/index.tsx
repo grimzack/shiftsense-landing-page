@@ -25,12 +25,14 @@ const LeftContentBlock = ({
       <Fade direction="left">
         <Row justify="space-between" align="middle" id={id}>
           <Col lg={11} md={11} sm={12} xs={24}>
+            <ContentWrapper>
+             <h6>{t(title)}</h6>
+              <Content>{t(content)}</Content>
+             </ContentWrapper>
             <SvgIcon src={icon} width="100%" height="100%" />
           </Col>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
-              <h6>{t(title)}</h6>
-              <Content>{t(content)}</Content>
               <ServiceWrapper>
                 <Row justify="space-between">
                   {typeof section === "object" &&
