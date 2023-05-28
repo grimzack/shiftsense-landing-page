@@ -1,31 +1,38 @@
-import { google } from 'googleapis';
-export async function getWaitlistDummyList() {
-  try {
-    const target = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
-    const jwt = new google.auth.JWT(
-      process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
-      undefined,
-      (process.env.GOOGLE_SHEETS_PRIVATE_KEY || '').replace(/\\n/g, '\n'),
-      target
-    );
+import useGoogleSheets from 'use-google-sheets';
+const { GoogleSpreadsheet } = require('google-spreadsheet');
 
-    const sheets = google.sheets({ version: 'v4', auth: jwt });
-    const response = await sheets.spreadsheets.values.get({
-      spreadsheetId: process.env.SPREADSHEET_ID,
-      range: 'Waitlist', // sheet name
+const doc = new GoogleSpreadsheet(process.env.REACT_APP_GOOGLE_SHEET_ID);
+
+
+export default async function googleSpreadsheet() {
+
+  console.log("called!")
+  try {
+    console.log(process.env)
+    const key =process.env.REACT_APP_GOOGLE_SHEETS_PRIVATE_KEY ?  process.env.REACT_APP_GOOGLE_SHEETS_PRIVATE_KEY : ""
+    console.log("key is " + key)
+    console.log(process.env.REACT_APP_GOOGLE_SHEETS_CLIENT_EMAIL)
+    
+    await doc.useServiceAccountAuth({
+      client_email: process.env.REACT_APP_GOOGLE_SHEETS_CLIENT_EMAIL,
+      private_key: key.replace(/\\n/gm, '\n')
     });
 
-    const rows = response.data.values;
-    if (rows != null && rows !== undefined && rows.length) {
-      return rows.map((row) => ({
-        title: row[2],
-        subtitle: row[3],
-        code: row[4],
-        browser: row[5],
-      }));
-    }
-  } catch (err) {
-    console.log(err);
+
+    console.log("got auth")
+
+    await doc.getInfo();
+    console.log("info")
+    const sheet = doc.sheetsByIndex[0];
+    console.log("sheet");
+    const rows = await sheet.getRows();
+    console.dir(rows);
+    const row_value = rows[2][0];
+    console.log(row_value)
+
+    //res.status(200).json({ message: 'A ok!' });
+  } catch (error) {
+    console.log("err is " + error)
+    //res.status(500).json(error);
   }
-  return [];
 }
